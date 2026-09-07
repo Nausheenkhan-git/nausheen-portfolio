@@ -1198,248 +1198,356 @@ a {
 }
 
 
-/* Project preview */
+/* =========================================
+   PROJECT PREVIEW AREA
+========================================= */
 
 .project-preview {
 
     min-height: 360px;
 
-    padding: 1.5rem;
+    padding: 2rem;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
-
-    background: var(--lavender-soft);
-}
-
-.preview-placeholder {
-
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 16px;
-
-    background:
-        radial-gradient(
-            circle at 50% 30%,
-            rgba(155,109,255,0.3),
-            transparent 60%
-        ),
-        #EDE3FF;
-
-    overflow: hidden;
-}
-
-
-/* Phone mockup */
-
-.mock-phone {
-
-    width: 150px;
-    height: 290px;
-
-    padding: 8px;
-
-    background: #30204D;
-
-    border-radius: 25px;
-
-    box-shadow: 0 20px 40px rgba(64,32,128,0.25);
-
-    transform: rotate(-7deg);
-}
-
-.mock-screen {
-
-    height: 100%;
 
     position: relative;
 
-    border-radius: 18px;
+    overflow: hidden;
 
     background:
-        linear-gradient(
-            145deg,
-            #D8C9F8,
-            #B895F0
-        );
+        radial-gradient(
+            circle at center,
+            rgba(155,109,255,0.18),
+            transparent 65%
+        ),
+        var(--lavender-soft);
+}
+
+
+/* =========================================
+   PHONE — INTRAMAP
+========================================= */
+
+.intramap-preview {
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(155,109,255,0.28),
+            transparent 60%
+        ),
+        var(--lavender-soft);
+
+}
+
+
+/* Phone frame */
+
+.mock-phone {
+
+    width: 190px;
+
+    height: 365px;
+
+    padding: 8px;
+
+    position: relative;
+
+    background: #211631;
+
+    border: 3px solid #382552;
+
+    border-radius: 34px;
+
+    box-shadow:
+        0 30px 60px rgba(64,32,128,0.28);
+
+    transform: rotate(-6deg);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+
+    z-index: 2;
+}
+
+
+/* Phone hover */
+
+.project-card:hover .mock-phone {
+
+    transform:
+        rotate(-3deg)
+        translateY(-8px);
+
+    box-shadow:
+        0 35px 70px rgba(64,32,128,0.32);
+
+}
+
+
+/* Phone speaker / camera */
+
+.phone-speaker {
+
+    position: absolute;
+
+    top: 7px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 55px;
+
+    height: 5px;
+
+    background: #120C1C;
+
+    border-radius: 10px;
+
+    z-index: 5;
+
+}
+
+
+/* Actual phone screen */
+
+.mock-screen {
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 26px;
 
     overflow: hidden;
-}
 
-.mock-map {
+    background: white;
 
-    position: absolute;
+    position: relative;
 
-    top: 40%;
-
-    left: 45%;
-
-    color: var(--purple);
-
-    font-size: 2rem;
-}
-
-.mock-route {
-
-    position: absolute;
-
-    width: 4px;
-
-    height: 160px;
-
-    background: var(--purple);
-
-    transform: rotate(35deg);
-
-    top: 25%;
-
-    left: 45%;
-
-    border-radius: 5px;
-}
-
-.mock-location {
-
-    position: absolute;
-
-    width: 15px;
-    height: 15px;
-
-    border-radius: 50%;
-
-    background: #6D3DD8;
-
-    bottom: 25%;
-
-    right: 25%;
-
-    box-shadow: 0 0 0 8px rgba(109,61,216,0.15);
 }
 
 
-/* Dashboard mockup */
+/* Actual IntraMap screenshot */
+
+.mock-screen img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+
+
+/* =========================================
+   POWER BI DASHBOARD
+========================================= */
+
+.dashboard-preview {
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(155,109,255,0.18),
+            transparent 65%
+        ),
+        var(--lavender-soft);
+
+}
+
+
+/* Dashboard outer frame */
 
 .mock-dashboard {
 
-    width: 80%;
+    width: 88%;
 
-    min-height: 250px;
+    max-width: 520px;
 
-    padding: 1.2rem;
+    aspect-ratio: 16 / 10;
+
+    padding: 8px;
+
+    position: relative;
+
+    background: #FFFFFF;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 25px 55px rgba(64,32,128,0.18);
+
+    transform: rotate(2deg);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+
+    overflow: hidden;
+
+}
+
+
+/* Dashboard hover */
+
+.project-card:hover .mock-dashboard {
+
+    transform:
+        rotate(0deg)
+        translateY(-8px);
+
+    box-shadow:
+        0 32px 65px rgba(64,32,128,0.23);
+
+}
+
+
+/* Power BI style top bar */
+
+.dashboard-topbar {
+
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding-left: 9px;
+
+    background: #F3EFFA;
+
+    border-radius: 9px 9px 0 0;
+
+}
+
+
+.dashboard-dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--purple-light);
+
+}
+
+
+/* Dashboard screenshot container */
+
+.dashboard-screen {
+
+    width: 100%;
+
+    height: calc(100% - 24px);
+
+    overflow: hidden;
+
+    border-radius: 0 0 9px 9px;
+
+    background: white;
+
+}
+
+
+/* Actual Power BI screenshot */
+
+.dashboard-screen img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+
+
+/* =========================================
+   WEB DASHBOARD / BROWSER
+========================================= */
+
+.website-preview {
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(155,109,255,0.18),
+            transparent 65%
+        ),
+        var(--lavender-soft);
+
+}
+
+
+/* Browser window */
+
+.mock-browser {
+
+    width: 90%;
+
+    max-width: 560px;
+
+    aspect-ratio: 16 / 10;
 
     background: white;
 
     border-radius: 14px;
 
-    box-shadow: 0 20px 50px rgba(64,32,128,0.12);
-
-    position: relative;
-}
-
-.dashboard-header {
-
-    width: 45%;
-
-    height: 10px;
-
-    background: var(--purple-pale);
-
-    border-radius: 10px;
-
-    margin-bottom: 1rem;
-}
-
-.dashboard-stats {
-
-    display: flex;
-
-    gap: 0.5rem;
-
-    margin-bottom: 1rem;
-}
-
-.dashboard-stats span {
-
-    flex: 1;
-
-    height: 45px;
-
-    background: var(--lavender);
-
-    border-radius: 7px;
-}
-
-.dashboard-chart {
-
-    width: 65%;
-
-    height: 120px;
-
-    background: var(--lavender);
-
-    border-radius: 8px;
-
-    position: relative;
+    box-shadow:
+        0 25px 55px rgba(64,32,128,0.18);
 
     overflow: hidden;
-}
 
-.chart-line {
+    transform: rotate(-2deg);
 
-    position: absolute;
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
 
-    width: 100%;
-    height: 3px;
-
-    background: var(--purple);
-
-    top: 60%;
-
-    transform: rotate(-8deg);
-}
-
-.dashboard-pie {
-
-    position: absolute;
-
-    right: 8%;
-
-    bottom: 25%;
-
-    font-size: 4rem;
-
-    color: var(--purple-light);
 }
 
 
-/* Browser mockup */
+/* Browser hover */
 
-.mock-browser {
+.project-card:hover .mock-browser {
 
-    width: 85%;
+    transform:
+        rotate(0deg)
+        translateY(-8px);
 
-    min-height: 230px;
+    box-shadow:
+        0 32px 65px rgba(64,32,128,0.23);
 
-    background: white;
-
-    border-radius: 12px;
-
-    box-shadow: 0 20px 50px rgba(64,32,128,0.12);
-
-    overflow: hidden;
 }
+
+
+/* Browser top bar */
 
 .browser-bar {
 
-    height: 30px;
+    height: 28px;
 
     display: flex;
 
@@ -1449,49 +1557,56 @@ a {
 
     padding-left: 12px;
 
-    background: #F2ECFA;
+    background: #F0EBF7;
+
 }
+
+
+/* Browser circles */
 
 .browser-bar span {
 
-    width: 6px;
-    height: 6px;
+    width: 7px;
+
+    height: 7px;
 
     border-radius: 50%;
 
     background: var(--purple-light);
-}
 
-.browser-content {
-
-    padding: 1.2rem;
-}
-
-.browser-content div {
-
-    height: 25px;
-
-    margin-bottom: 10px;
-
-    border-radius: 6px;
-
-    background: var(--lavender);
-}
-
-.browser-content div:first-child {
-    width: 55%;
-}
-
-.browser-content div:nth-child(2) {
-    width: 80%;
-}
-
-.browser-content div:nth-child(3) {
-    width: 65%;
 }
 
 
+/* Actual website screenshot */
 
+.browser-screen {
+
+    width: 100%;
+
+    height: calc(100% - 28px);
+
+    overflow: hidden;
+
+    background: white;
+
+}
+
+
+/* Website screenshot */
+
+.browser-screen img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: top center;
+
+}
 /* Project info */
 
 .project-info {
