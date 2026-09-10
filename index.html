@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
 
@@ -11,7 +10,7 @@
 
     <meta
         name="description"
-        content="Nausheen Khan — Software Developer Portfolio"
+        content="Nausheen Khan — Information Systems graduate, software developer and UI/UX enthusiast."
     >
 
     <meta
@@ -21,54 +20,42 @@
 
     <title>Nausheen Khan | Software Developer</title>
 
-    <!-- =========================================
-         GOOGLE FONTS
-    ========================================== -->
-
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
-    <!-- =========================================
-         STYLESHEET
-    ========================================== -->
-
+    <!-- Font Awesome for Tech Icons -->
     <link
         rel="stylesheet"
-        href="css/style.css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-
 
 <body>
 
-    <!-- =========================================
-         INTRO / LOADING ANIMATION
-    ========================================== -->
+    <!-- =========================================================
+         LOADING / INTRO SCREEN
+    ========================================================== -->
 
-    <div
-        class="intro"
-        id="intro"
-        aria-hidden="true"
-    >
+    <div class="intro-screen" id="introScreen">
 
         <div class="intro-content">
 
-            <div class="intro-logo">
+            <div class="intro-monogram">
                 NK
             </div>
 
             <div class="intro-name">
-                Nausheen Khan
+                <span>Nausheen</span>
+                <span>Khan</span>
             </div>
 
             <div class="intro-line"></div>
@@ -78,138 +65,109 @@
     </div>
 
 
-    <!-- =========================================
+    <!-- =========================================================
          NAVIGATION
-    ========================================== -->
+    ========================================================== -->
 
-    <header class="navbar">
+    <header class="site-header" id="siteHeader">
 
-        <div class="container navbar-container">
+        <nav class="navbar">
 
-            <a
-                href="#home"
-                class="logo"
-            >
-                Nausheen<span> khan</span>
+            <a href="#home" class="brand">
+                <span class="brand-symbol">&lt;/&gt;</span>
+                <span>NK</span>
             </a>
 
+            <div class="nav-links" id="navLinks">
 
-            <nav
-                class="nav-links"
-                aria-label="Main navigation"
-            >
+                <a href="#home" class="nav-link active">Home</a>
 
-                <a href="#home">
-                    Home
+                <a href="#about" class="nav-link">About</a>
+
+                <a href="#skills" class="nav-link">Skills</a>
+
+                <a href="#experience" class="nav-link">Experience</a>
+
+                <a href="#projects" class="nav-link">Projects</a>
+
+                <a href="#certifications" class="nav-link">Certifications</a>
+
+                <a href="#achievements" class="nav-link">Achievements</a>
+
+                <a href="#contact" class="nav-link">Contact</a>
+
+            </div>
+
+            <div class="nav-actions">
+
+                <!-- Theme Toggle -->
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    aria-label="Toggle light and dark mode"
+                    type="button"
+                >
+                    <span class="theme-icon" id="themeIcon">☀</span>
+                    <span class="theme-label">Theme</span>
+                </button>
+
+                <a
+                    href="#contact"
+                    class="nav-cta"
+                >
+                    Let's Talk
+                    <span>↗</span>
                 </a>
 
-                <a href="#about">
-                    About
-                </a>
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation"
+                    type="button"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-                <a href="#skills">
-                    Skills
-                </a>
+            </div>
 
-                <a href="#experience">
-                    Experience
-                </a>
-
-                <a href="#projects">
-                    Projects
-                </a>
-
-                <a href="#achievements">
-                    Achievements
-
-                <a href="#contact">
-                    Contact
-                </a>
-
-            </nav>
-
-
-            <a
-                href="documents/nausheen_resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resume-btn"
-            >
-                Resume ↗
-            </a>
-
-        </div>
+        </nav>
 
     </header>
 
 
-
-    <!-- =========================================
-         MAIN CONTENT
-    ========================================== -->
-
     <main>
 
 
-        <!-- =====================================
+        <!-- =====================================================
              HERO
-        ====================================== -->
+        ====================================================== -->
 
-        <section
-            id="home"
-            class="hero"
-        >
+        <section class="hero section" id="home">
 
-            <div class="hero-decoration decoration-one"></div>
+            <div class="hero-grid">
 
-            <div class="hero-decoration decoration-two"></div>
-
-
-            <div class="container hero-container">
-
-
-                <!-- HERO TEXT -->
-
-                <div class="hero-text">
+                <div class="hero-content reveal">
 
                     <div class="eyebrow">
-
                         <span class="eyebrow-dot"></span>
-
-                        SOFTWARE DEVELOPER
-
+                        INFORMATION SYSTEMS GRADUATE
                     </div>
 
-
                     <h1>
-
                         Hi, I'm
-
-                        <span class="script-name">
-                            Nausheen Khan
-                        </span>
-
-                        <!-- <span class="heart">
-                            ♡
-                        </span> -->
-
+                        <span class="gradient-text">Nausheen.</span>
+                        <br>
+                        I build things
+                        <span class="hero-outline">for the web.</span>
                     </h1>
 
-
-                    <h2>
-                        I build digital solutions
-                        for real-world problems.
-                    </h2>
-
-
                     <p class="hero-description">
-
-                        Information Systems graduate passionate about
-                        software development, technology, data, and
-                        creating meaningful digital experiences.
-
+                        Software developer focused on creating thoughtful
+                        digital experiences through frontend development,
+                        UI/UX, data, AI and modern web technologies.
                     </p>
-
 
                     <div class="hero-buttons">
 
@@ -218,96 +176,97 @@
                             class="btn btn-primary"
                         >
                             View My Work
-                            <span>→</span>
+                            <span>↗</span>
                         </a>
 
-
                         <a
-                            href="#contact"
+                            href="documents/nausheen_resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             class="btn btn-outline"
                         >
-                            Let's Connect
-                            <span>↗</span>
+                            Download CV
+                            <span>↓</span>
                         </a>
 
                     </div>
 
+                    <div class="hero-tech">
 
-                    <div class="hero-socials">
-
-                        <span>
-                            Find me online
+                        <span class="tech-label">
+                            TECH I WORK WITH
                         </span>
 
-                        <span class="social-divider">
-                            /
-                        </span>
+                        <div class="tech-icons">
 
-                        <a
-                            href="https://linkedin.com/in/nausheen-khan-26808633b/"
-                        >
-                            LinkedIn
-                        </a>
+                            <span title="Python"><i class="fab fa-python"></i></span>
+                            <span title="JavaScript"><i class="fab fa-js"></i></span>
+                            <span title="React"><i class="fab fa-react"></i></span>
+                            <span title="Node.js"><i class="fab fa-node-js"></i></span>
+                            <span title="HTML5"><i class="fab fa-html5"></i></span>
+                            <span title="CSS3"><i class="fab fa-css3-alt"></i></span>
+                            <span title="Java"><i class="fab fa-java"></i></span>
+                            <span title="Git"><i class="fab fa-git-alt"></i></span>
+                            <span title="GitHub"><i class="fab fa-github"></i></span>
+                            <span title="Figma"><i class="fab fa-figma"></i></span>
+                            <span title="AWS"><i class="fab fa-aws"></i></span>
+                            <span title="Docker"><i class="fab fa-docker"></i></span>
 
-                        <a
-                            href="https://github.com/Nausheenkhan-git"
-                        >
-                            GitHub
-                        </a>
+                        </div>
 
                     </div>
 
                 </div>
 
 
-
                 <!-- HERO IMAGE -->
 
-                <div class="hero-visual">
+                <div class="hero-visual reveal">
 
-                    <div class="photo-glow"></div>
+                    <div class="hero-glow"></div>
 
-                    <div class="photo-orbit orbit-one"></div>
+                    <div class="hero-orbit orbit-one"></div>
+                    <div class="hero-orbit orbit-two"></div>
 
-                    <div class="photo-orbit orbit-two"></div>
+                    <div class="hero-photo">
 
+                        <img
+                            src="images/hero.jpeg"
+                            alt="Nausheen Khan"
+                        >
 
-                    <div class="photo-frame">
+                    </div>
 
-                        <div class="photo-inner">
+                    <div class="floating-code-card">
 
-                            <img
-                                src="images/hero.jpeg"
-                                alt="Nausheen Khan"
-                            >
+                        <div class="code-header">
+
+                            <span class="code-dot"></span>
+                            <span class="code-dot"></span>
+                            <span class="code-dot"></span>
 
                         </div>
 
-                    </div>
+                        <pre><code>&lt;developer&gt;
 
+  const passion =
+      "building";
 
-                    <div class="floating-card floating-card-one">
+  const focus =
+      "experience";
 
-                        <span class="floating-number">
-                            02
-                        </span>
-
-                        <span>
-                            Internships
-                        </span>
+&lt;/developer&gt;</code></pre>
 
                     </div>
 
+                    <div class="floating-badge">
 
-                    <div class="floating-card floating-card-two">
+                        <span>✦</span>
 
-                        <span class="floating-number">
-                            09
-                        </span>
-
-                        <span>
-                            Projects
-                        </span>
+                        <div>
+                            <strong>Creative</strong>
+                            <small>Developer</small>
+                        </div>
 
                     </div>
 
@@ -318,139 +277,105 @@
         </section>
 
 
+        <!-- =====================================================
+             ABOUT / STATS
+        ====================================================== -->
 
-        <!-- =====================================
-             ABOUT
-        ====================================== -->
-
-        <section
-            id="about"
-            class="about section"
-        >
+        <section class="about section" id="about">
 
             <div class="container">
 
-                <div class="section-top">
+                <div class="about-grid">
 
-                    <div>
+                    <div class="about-text reveal">
 
                         <p class="section-label">
                             ABOUT ME
                         </p>
 
                         <h2>
-                            A little about
-                            <em>me.</em>
+                            I'm passionate about
+                            <span>creating digital solutions.</span>
                         </h2>
 
-                    </div>
-
-                    <p class="section-note">
-                        Developer • Designer • Problem solver
-                    </p>
-
-                </div>
-
-
-                <div class="about-card">
-
-                    <div class="about-icon">
-                        ✦
-                    </div>
-
-
-                    <div class="about-text">
-
-                        <!-- <p class="about-lead">
-
-                            I'm an Information Systems graduate
-                            interested in the intersection of
-                            technology, creativity, and real-world
-                            problem solving.
-
-                        </p> -->
-
-
                         <p>
-                            I'm an Information Systems graduate
-                            interested in the intersection of
-                            technology, creativity, and real-world
-                            problem solving.
-
-                            My experience spans frontend development,
-                            UI/UX implementation, data analytics,
-                            cybersecurity, cloud technologies, and
-                            artificial intelligence. I enjoy turning
-                            ideas into practical digital experiences
-                            that are both functional and intuitive.
-
+                            I'm an Information Systems graduate with a strong
+                            interest in software development, UI/UX design,
+                            artificial intelligence, data and cybersecurity.
                         </p>
 
-
                         <p>
-
-                            Through academic projects, internships,
-                            hackathons, and independent learning,
-                            I've worked across different stages of
-                            the development process, from research
-                            and wireframes to implementation,
-                            testing, deployment, and iteration.
-
+                            I enjoy turning ideas into practical digital
+                            experiences from researching user needs and
+                            designing interfaces to developing responsive
+                            applications and data driven solutions.
                         </p>
+
+                        <a
+                            href="#experience"
+                            class="text-link"
+                        >
+                            Explore My Experience
+                            <span>↗</span>
+                        </a>
 
                     </div>
 
 
-                    <div class="about-facts">
+                    <div class="stats-grid reveal">
 
-                        <div>
+                        <div class="stat-card">
 
-                            <span>
-                                EDUCATION
-                            </span>
+                            <div class="stat-icon">
+                                ✦
+                            </div>
 
-                            <strong>
-                                BSc Information Systems
-                            </strong>
-
-                        </div>
-
-
-                        <div>
-
-                            <span>
-                                UNIVERSITY
-                            </span>
-
-                            <strong>
-                                UDST
-                            </strong>
+                            <div>
+                                <strong>2+</strong>
+                                <span>Internships</span>
+                            </div>
 
                         </div>
 
 
-                        <div>
+                        <div class="stat-card">
 
-                            <span>
-                                BASED IN
-                            </span>
+                            <div class="stat-icon">
+                                &lt;/&gt;
+                            </div>
 
-                            <strong>
-                                Doha, Qatar
-                            </strong>
+                            <div>
+                                <strong>15+</strong>
+                                <span>Projects Completed</span>
+                            </div>
 
                         </div>
 
 
-                        <div>
+                        <div class="stat-card">
 
-                            <span>
-                                FOCUS
-                            </span>
+                            <div class="stat-icon">
+                                ◉
+                            </div>
 
-                            <strong>
-                                Software & UX
-                            </strong>
+                            <div>
+                                <strong>2</strong>
+                                <span>Hackathon Wins</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon">
+                                ♢
+                            </div>
+
+                            <div>
+                                <strong>5</strong>
+                                <span>Certifications</span>
+                            </div>
 
                         </div>
 
@@ -463,278 +388,347 @@
         </section>
 
 
-
-        <!-- =====================================
+        <!-- =====================================================
              SKILLS
-        ====================================== -->
+        ====================================================== -->
 
-        <section
-            id="skills"
-            class="skills section"
-        >
+        <section class="skills section" id="skills">
 
             <div class="container">
 
-                <div class="section-top">
+                <div class="section-heading centered reveal">
 
-                    <div>
+                    <p class="section-label">
+                        MY SKILLS
+                    </p>
 
-                        <p class="section-label">
-                            MY TOOLKIT
-                        </p>
+                    <h2>
+                        Technologies I <span>work with.</span>
+                    </h2>
 
-                        <h2>
-                            Skills &
-                            technologies.
-                        </h2>
-
-                    </div>
-
-                    <p class="section-note">
-                        Technologies I've worked with.
+                    <p>
+                        A combination of development, design, data,
+                        cloud and cybersecurity skills.
                     </p>
 
                 </div>
 
 
-                <div class="skills-categories">
+                <div class="skills-grid">
 
 
-                    <!-- PROGRAMMING -->
+                    <!-- Programming -->
 
-                    <div class="skill-category">
+                    <div class="skill-panel reveal">
 
-                        <div class="skill-category-header">
+                        <div class="skill-panel-header">
 
-                            <span class="category-number">
+                            <span class="skill-number">
                                 01
                             </span>
 
                             <h3>
-                                Programming Languages
+                                Programming
                             </h3>
 
                         </div>
 
-                        <div class="skill-tags">
+                        <div class="skill-item">
 
-                            <span>Python</span>
-                            <span>Java</span>
-                            <span>JavaScript</span>
-                            <span>SQL</span>
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span>90%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:90%"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span>88%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:88%"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="skill-info">
+                                <span>Java</span>
+                                <span>78%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:78%"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="skill-info">
+                                <span>SQL</span>
+                                <span>85%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:85%"></span>
+                            </div>
 
                         </div>
 
                     </div>
 
 
+                    <!-- Frontend -->
 
-                    <!-- FRONTEND -->
+                    <div class="skill-panel reveal">
 
-                    <div class="skill-category">
+                        <div class="skill-panel-header">
 
-                        <div class="skill-category-header">
-
-                            <span class="category-number">
+                            <span class="skill-number">
                                 02
                             </span>
 
                             <h3>
-                                Frontend Development
+                                Frontend
                             </h3>
 
                         </div>
 
-                        <div class="skill-tags">
+                        <div class="skill-item">
 
-                            <span>React.js</span>
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>Bootstrap</span>
-                            <span>Tailwind CSS</span>
-                            <span>CoreUI</span>
+                            <div class="skill-info">
+                                <span>React.js</span>
+                                <span>88%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:88%"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="skill-info">
+                                <span>HTML5 / CSS3</span>
+                                <span>95%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:95%"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="skill-info">
+                                <span>Tailwind CSS</span>
+                                <span>85%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:85%"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="skill-info">
+                                <span>Bootstrap</span>
+                                <span>88%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:88%"></span>
+                            </div>
 
                         </div>
 
                     </div>
 
 
+                    <!-- Backend -->
 
-                    <!-- BACKEND -->
+                    <div class="skill-panel reveal">
 
-                    <div class="skill-category">
+                        <div class="skill-panel-header">
 
-                        <div class="skill-category-header">
-
-                            <span class="category-number">
+                            <span class="skill-number">
                                 03
                             </span>
 
                             <h3>
-                                Backend Development
+                                Backend & APIs
                             </h3>
 
                         </div>
 
-                        <div class="skill-tags">
+                        <div class="skill-item">
 
-                            <span>Node.js</span>
-                            <span>Express.js</span>
-                            <span>Flask</span>
-                            <span>RESTful APIs</span>
-                            <span>WordPress</span>
+                            <div class="skill-info">
+                                <span>Node.js</span>
+                                <span>82%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:82%"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="skill-info">
+                                <span>Express.js</span>
+                                <span>80%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:80%"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="skill-info">
+                                <span>Flask</span>
+                                <span>76%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:76%"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="skill-info">
+                                <span>REST APIs</span>
+                                <span>84%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:84%"></span>
+                            </div>
 
                         </div>
 
                     </div>
 
 
+                    <!-- Data -->
 
-                    <!-- DATABASES -->
+                    <div class="skill-panel reveal">
 
-                    <div class="skill-category">
+                        <div class="skill-panel-header">
 
-                        <div class="skill-category-header">
-
-                            <span class="category-number">
+                            <span class="skill-number">
                                 04
                             </span>
 
                             <h3>
-                                Databases
+                                Data & Cloud
                             </h3>
 
                         </div>
 
-                        <div class="skill-tags">
+                        <div class="skill-item">
 
-                            <span>MongoDB</span>
-                            <span>PostgreSQL</span>
-                            <span>MySQL</span>
+                            <div class="skill-info">
+                                <span>Power BI</span>
+                                <span>88%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:88%"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="skill-info">
+                                <span>Pandas / NumPy</span>
+                                <span>84%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:84%"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="skill-info">
+                                <span>Azure</span>
+                                <span>75%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:75%"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="skill-info">
+                                <span>GitHub Actions</span>
+                                <span>78%</span>
+                            </div>
+
+                            <div class="skill-bar">
+                                <span style="width:78%"></span>
+                            </div>
 
                         </div>
 
                     </div>
 
 
+                </div>
 
-                    <!-- DEVOPS -->
+                <div class="skill-panel skill-panel-wide reveal">
 
-                    <div class="skill-category">
+                    <div class="skill-panel-header">
 
-                        <div class="skill-category-header">
+                        <span class="skill-number">
+                            05
+                        </span>
 
-                            <span class="category-number">
-                                05
-                            </span>
-
-                            <h3>
-                                DevOps & Cloud
-                            </h3>
-
-                        </div>
-
-                        <div class="skill-tags">
-
-                            <span>Git</span>
-                            <span>GitHub</span>
-                            <span>Gitflow</span>
-                            <span>GitHub Actions</span>
-                            <span>CI/CD</span>
-                            <span>Azure</span>
-
-                        </div>
+                        <h3>
+                            Tools & Other Skills
+                        </h3>
 
                     </div>
 
+                    <div class="skill-tags-cloud">
 
-
-                    <!-- DATA -->
-
-                    <div class="skill-category">
-
-                        <div class="skill-category-header">
-
-                            <span class="category-number">
-                                06
-                            </span>
-
-                            <h3>
-                                Data Analytics
-                            </h3>
-
-                        </div>
-
-                        <div class="skill-tags">
-
-                            <span>Power BI</span>
-                            <span>Data Visualization</span>
-                            <span>Statistical Analysis</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- OPERATING SYSTEMS -->
-
-                    <div class="skill-category">
-
-                        <div class="skill-category-header">
-
-                            <span class="category-number">
-                                07
-                            </span>
-
-                            <h3>
-                                Operating Systems
-                            </h3>
-
-                        </div>
-
-                        <div class="skill-tags">
-
-                            <span>Linux</span>
-                            <span>Windows</span>
-                            <span>macOS</span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- CYBERSECURITY -->
-
-                    <div class="skill-category cybersecurity-category">
-
-                        <div class="skill-category-header">
-
-                            <span class="category-number">
-                                08
-                            </span>
-
-                            <h3>
-                                Cybersecurity
-                            </h3>
-
-                        </div>
-
-                        <div class="skill-tags">
-
-                            <span>SQL Injection</span>
-                            <span>XSS</span>
-                            <span>CSRF</span>
-                            <span>SSRF</span>
-                            <span>Information Disclosure</span>
-                            <span>Access Control Bypass</span>
-                            <span>Session Hijacking</span>
-                            <span>Directory Traversal</span>
-                            <span>Secure Coding</span>
-                            <span>Software Testing</span>
-
-                        </div>
+                        <span>MongoDB</span>
+                        <span>PostgreSQL</span>
+                        <span>MySQL</span>
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Figma</span>
+                        <span>Cybersecurity</span>
+                        <span>AI</span>
+                        <span>UI/UX</span>
+                        <span>Software Testing</span>
 
                     </div>
 
@@ -745,120 +739,109 @@
         </section>
 
 
-
-        <!-- =====================================
+        <!-- =====================================================
              EXPERIENCE
-        ====================================== -->
+        ====================================================== -->
 
-        <section
-            id="experience"
-            class="experience section"
-        >
+        <section class="experience section" id="experience">
 
             <div class="container">
 
-                <div class="section-top">
+                <div class="section-heading reveal">
 
-                    <div>
+                    <p class="section-label">
+                        EXPERIENCE
+                    </p>
 
-                        <p class="section-label">
-                            EXPERIENCE
-                        </p>
+                    <h2>
+                        Where I've <span>worked.</span>
+                    </h2>
 
-                        <h2>
-                            Where I've worked.
-                        </h2>
-
-                    </div>
-
-                    <p class="section-note">
-                        My professional journey so far.
+                    <p>
+                        My professional experience across web development,
+                        UI/UX and modern frontend technologies.
                     </p>
 
                 </div>
 
 
-                <div class="timeline">
+                <div class="experience-list">
 
 
-                    <!-- EXPERIENCE 01 -->
+                    <!-- BIN OMRAN -->
 
-                    <div class="timeline-item">
+                    <article class="experience-card reveal">
 
-                        <div class="timeline-marker">
+                        <div class="experience-index">
                             01
                         </div>
 
+                        <div class="experience-main">
 
-                        <div class="timeline-content">
+                            <div class="experience-top">
 
-                            <div class="experience-meta">
+                                <div>
 
-                                <span>
-                                    April 2026 — July 2026
-                                </span>
+                                    <span class="experience-date">
+                                        APR 2026 — JUL 2026
+                                    </span>
 
-                                <span>
-                                    Web Development Intern
+                                    <h3>
+                                        Web Development Intern
+                                    </h3>
+
+                                    <h4>
+                                        Bin Omran Trading & Telecommunication
+                                    </h4>
+
+                                </div>
+
+                                <span class="experience-type">
+                                    INTERNSHIP
                                 </span>
 
                             </div>
 
-
-                            <h3>
-                                Bin Omran Trading &
-                                Telecommunication
-                            </h3>
-
-
-                            <p class="experience-intro">
-
-                                Worked on the redesign and development
-                                of a corporate website, combining UX/UI
-                                research, frontend development, SEO,
-                                and stakeholder collaboration.
-
+                            <p>
+                                Worked on the redesign and development of
+                                a corporate website, combining UX/UI research,
+                                frontend development, SEO and stakeholder
+                                collaboration.
                             </p>
 
-
-                            <ul class="experience-list">
+                            <ul>
 
                                 <li>
-                                    Conducted a comprehensive website
-                                    audit and competitor analysis to
-                                    identify UX/UI gaps and opportunities.
+                                    Conducted a comprehensive website audit
+                                    and competitor analysis.
                                 </li>
 
                                 <li>
                                     Redesigned the company website using
-                                    modern UI/UX principles and
-                                    high-fidelity Figma prototypes.
+                                    modern UI/UX principles and Figma.
                                 </li>
 
                                 <li>
                                     Developed a responsive frontend using
-                                    HTML, CSS, and JavaScript.
+                                    HTML, CSS and JavaScript.
                                 </li>
 
                                 <li>
-                                    Collaborated with stakeholders to
-                                    align the design with corporate
-                                    brand identity.
+                                    Collaborated with stakeholders to align
+                                    the design with corporate branding.
                                 </li>
 
                                 <li>
                                     Implemented SEO practices and CMS
-                                    integration for dynamic content.
+                                    integration.
                                 </li>
 
                             </ul>
-
 
                             <div class="experience-tags">
 
                                 <span>HTML</span>
                                 <span>CSS</span>
-                                <span>WordPress</span>
                                 <span>JavaScript</span>
                                 <span>Figma</span>
                                 <span>SEO</span>
@@ -868,82 +851,75 @@
 
                         </div>
 
-                    </div>
+                    </article>
 
 
+                    <!-- GENESIS -->
 
-                    <!-- EXPERIENCE 02 -->
+                    <article class="experience-card reveal">
 
-                    <div class="timeline-item">
-
-                        <div class="timeline-marker">
+                        <div class="experience-index">
                             02
                         </div>
 
+                        <div class="experience-main">
 
-                        <div class="timeline-content">
+                            <div class="experience-top">
 
-                            <div class="experience-meta">
+                                <div>
 
-                                <span>
-                                    June 2025 — August 2025
-                                </span>
+                                    <span class="experience-date">
+                                        JUN 2025 — AUG 2025
+                                    </span>
 
-                                <span>
-                                    Web Development Intern
+                                    <h3>
+                                        Web Development Intern
+                                    </h3>
+
+                                    <h4>
+                                        Genesis Technologies Qatar
+                                    </h4>
+
+                                </div>
+
+                                <span class="experience-type">
+                                    INTERNSHIP
                                 </span>
 
                             </div>
 
-
-                            <h3>
-                                Genesis Technologies Qatar
-                            </h3>
-
-
-                            <p class="experience-intro">
-
-                                Developed a restaurant ordering web
-                                application while working with modern
-                                React development practices and
-                                responsive UI technologies.
-
+                            <p>
+                                Developed a restaurant ordering web application
+                                while working with React development practices
+                                and responsive UI technologies.
                             </p>
 
-
-                            <ul class="experience-list">
+                            <ul>
 
                                 <li>
-                                    Developed a restaurant ordering
-                                    application using React.js and
-                                    mock API integration.
+                                    Developed a restaurant ordering application
+                                    using React.js and mock API integration.
                                 </li>
 
                                 <li>
-                                    Implemented bill splitting,
-                                    multilingual support, and
-                                    payment workflow features.
+                                    Implemented bill splitting, multilingual
+                                    support and payment workflow features.
                                 </li>
 
                                 <li>
-                                    Enhanced responsive UI/UX using
-                                    Bootstrap and Tailwind CSS.
+                                    Enhanced responsive UI/UX using Bootstrap
+                                    and Tailwind CSS.
                                 </li>
 
                                 <li>
-                                    Applied React Hooks and Context API
-                                    to improve modularity and
-                                    maintainability.
+                                    Applied React Hooks and Context API.
                                 </li>
 
                                 <li>
-                                    Collaborated using GitHub version
-                                    control and modern development
-                                    workflows.
+                                    Collaborated using GitHub version control.
                                 </li>
 
                             </ul>
-
 
                             <div class="experience-tags">
 
@@ -957,7 +933,7 @@
 
                         </div>
 
-                    </div>
+                    </article>
 
                 </div>
 
@@ -966,49 +942,42 @@
         </section>
 
 
+        <!-- =====================================================
+             FEATURED PROJECTS
+        ====================================================== -->
 
-        <!-- =====================================
-             PROJECTS
-        ====================================== -->
-
-        <section
-            id="projects"
-            class="projects section"
-        >
+        <section class="projects section" id="projects">
 
             <div class="container">
 
-                <div class="section-top">
+                <div class="section-heading centered reveal">
 
-                    <div>
+                    <p class="section-label">
+                        FEATURED PROJECTS
+                    </p>
 
-                        <p class="section-label">
-                            SELECTED WORK
-                        </p>
+                    <h2>
+                        Some of my <span>recent work.</span>
+                    </h2>
 
-                        <h2>
-                            Things I've built.
-                        </h2>
-
-                    </div>
-
-                    <p class="section-note">
-                        A few projects I'm proud of.
+                    <p>
+                        A selection of academic and personal projects
+                        across development, AI, data and UX.
                     </p>
 
                 </div>
 
 
-                <div class="projects-list">
+                <div class="featured-projects">
 
 
-                    <!-- =================================
-                         PROJECT 01 — INTRAMAP
-                    ================================== -->
+                    <!-- INTRAMAP -->
 
-                    <article class="project-card">
+                    <article class="featured-project reveal">
 
-                        <div class="project-preview intramap-preview">
+                        <div class="project-visual project-purple">
+
+                            <div class="project-glow"></div>
 
                             <div class="mock-phone">
 
@@ -1028,27 +997,25 @@
                         </div>
 
 
-                        <div class="project-info">
+                        <div class="project-content">
 
-                            <span class="project-number">
-                                01
-                            </span>
+                            <div class="project-meta">
+                                <span>01</span>
+                                <span>UNIVERSITY CAPSTONE</span>
+                            </div>
 
                             <h3>
                                 IntraMap
                             </h3>
 
                             <p>
-
-                                Indoor localization and navigation
-                                system designed to help students
-                                navigate large university buildings
-                                through interactive digital maps.
-
+                                An indoor localization and navigation system
+                                designed to help students navigate large
+                                university buildings through virtual maps,
+                                positioning and dynamic routing.
                             </p>
 
-
-                            <div class="project-tags">
+                            <div class="project-tech">
 
                                 <span>React Native</span>
                                 <span>Python</span>
@@ -1057,13 +1024,9 @@
 
                             </div>
 
-
-                            <div class="project-links">
-
-                                <span class="project-status">
-                                    University Capstone
-                                </span>
-
+                            <div class="project-arrow">
+                                Academic Project
+                                <span>↗</span>
                             </div>
 
                         </div>
@@ -1071,25 +1034,29 @@
                     </article>
 
 
+                    <!-- RETAIL -->
 
-                    <!-- =================================
-                         PROJECT 02 — RETAIL
-                    ================================== -->
+                    <article class="featured-project reverse reveal">
 
-                    <article class="project-card reverse">
+                        <div class="project-visual project-blue">
 
-                        <div class="project-preview dashboard-preview">
+                            <div class="project-glow"></div>
 
                             <div class="mock-dashboard">
 
                                 <div class="dashboard-topbar">
 
-                                    <span class="dashboard-dot"></span>
-                                    <span class="dashboard-dot"></span>
-                                    <span class="dashboard-dot"></span>
+                                    <div class="dashboard-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+
+                                    <div class="dashboard-title">
+                                        Retail Analytics
+                                    </div>
 
                                 </div>
-
 
                                 <div class="dashboard-screen">
 
@@ -1105,42 +1072,36 @@
                         </div>
 
 
-                        <div class="project-info">
+                        <div class="project-content">
 
-                            <span class="project-number">
-                                02
-                            </span>
+                            <div class="project-meta">
+                                <span>02</span>
+                                <span>DATA ANALYTICS</span>
+                            </div>
 
                             <h3>
                                 Retail Sales Forecasting
                             </h3>
 
                             <p>
-
-                                A data analysis and forecasting project
-                                using retail sales data to identify
-                                patterns, analyze performance, and
-                                predict future sales.
-
+                                A data analysis and forecasting project using
+                                retail sales data to identify patterns,
+                                understand performance and predict future
+                                sales using statistical techniques.
                             </p>
 
-
-                            <div class="project-tags">
+                            <div class="project-tech">
 
                                 <span>Python</span>
                                 <span>Pandas</span>
-                                <span>SARIMAX</span>
+                                <span>SARIMA</span>
                                 <span>Power BI</span>
 
                             </div>
 
-
-                            <div class="project-links">
-
-                                <span class="project-status">
-                                    Data Analytics Project
-                                </span>
-
+                            <div class="project-arrow">
+                                Data Analytics Project
+                                <span>↗</span>
                             </div>
 
                         </div>
@@ -1148,25 +1109,30 @@
                     </article>
 
 
+                    <!-- STUDENT ASSESSMENT -->
 
-                    <!-- =================================
-                         PROJECT 03 — STUDENT ASSESSMENT
-                    ================================== -->
+                    <article class="featured-project reveal">
 
-                    <article class="project-card">
+                        <div class="project-visual project-pink">
 
-                        <div class="project-preview website-preview">
+                            <div class="project-glow"></div>
 
                             <div class="mock-browser">
 
                                 <div class="browser-bar">
 
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
+                                    <div class="browser-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+
+                                    <div class="browser-url">
+                                        Course Management System
+                                        course-management.app
+                                    </div>
 
                                 </div>
-
 
                                 <div class="browser-screen">
 
@@ -1182,37 +1148,35 @@
                         </div>
 
 
-                        <div class="project-info">
+                        <div class="project-content">
 
-                            <span class="project-number">
-                                03
-                            </span>
+                            <div class="project-meta">
+                                <span>03</span>
+                                <span>BACKEND DEVELOPMENT</span>
+                            </div>
 
                             <h3>
                                 Course Management System
                             </h3>
 
                             <p>
-                                Queue-based request management system
-                                with email verification and an
-                                admin dashboard.
+                                Queue-based request management system with
+                                email verification and an admin dashboard.
+                                
                             </p>
 
-
-                            <div class="project-tags">
+                            <div class="project-tech">
                                 <span>Node.js</span>
-                                <span>Express.js</span>
                                 <span>JavaScript</span>
+                                <span>Express.js</span>
                                 <span>MongoDB</span>
+                                
+
                             </div>
 
-
-                            <div class="project-links">
-
-                                <span class="project-status">
-                                    Academic Project
-                                </span>
-
+                            <div class="project-arrow">
+                                Academic Project
+                                <span>↗</span>
                             </div>
 
                         </div>
@@ -1222,22 +1186,25 @@
                 </div>
 
 
-
-                <!-- =====================================
+                <!-- =================================================
                      MORE PROJECTS
-                ====================================== -->
+                ================================================== -->
 
                 <div class="more-projects">
 
-                    <div class="more-projects-heading">
+                    <div class="more-projects-heading reveal">
 
-                        <p class="section-label">
-                            MORE PROJECTS
-                        </p>
+                        <div>
 
-                        <h3>
-                            Other things I've built.
-                        </h3>
+                            <p class="section-label">
+                                MORE PROJECTS
+                            </p>
+
+                            <h3>
+                                Other things I've built.
+                            </h3>
+
+                        </div>
 
                     </div>
 
@@ -1245,237 +1212,177 @@
                     <div class="project-mini-grid">
 
 
-                        <!-- 04 -->
+                        <article class="project-mini-card reveal">
 
-                        <article class="project-mini-card">
-
-                            <span>
+                            <div class="mini-number">
                                 04
-                            </span>
+                            </div>
+
+                            <div class="mini-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
 
                             <h4>
-                                 Student Self-Assessment
+                                Student Self-Assessment
                             </h4>
 
                             <p>
-                               An AI-powered assessment platform
-                                designed to help students evaluate
-                                their learning and receive personalized
-                                insights.
+                               An AI-powered assessment platform designed
+                                to help students evaluate their learning and
+                                receive personalized insights through a
+                                web-based experience.
                             </p>
 
-                            <div>
-
-                                <small>
-                                   AI
-                                </small>
-
-                                <small>
-                                 Web Development
-                                </small>
-
-                                <small>
-                                   Azure
-                                </small>
-
-                                <small>
-                                   CI/CD    
-                                </small>
-
+                            <div class="mini-tags">
+                               <span>AI</span>
+                                <span>Web Development</span>
+                                <span>Azure</span>
+                                <span>CI/CD</span>
                             </div>
 
                         </article>
 
 
+                        <article class="project-mini-card reveal">
 
-                        <!-- 05 -->
-
-                        <article class="project-mini-card">
-
-                            <span>
+                            <div class="mini-number">
                                 05
-                            </span>
+                            </div>
+
+                            <div class="mini-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
 
                             <h4>
-                                Recipe Planner &
-                                Meal Finder API
+                                Recipe Planner & Meal Finder API
                             </h4>
 
                             <p>
-                                PostgreSQL-backed CRUD APIs and
-                                database schemas following REST
-                                architecture.
+                                PostgreSQL-backed CRUD APIs and database
+                                schemas following REST architecture.
                             </p>
 
-                            <div>
-
-                                <small>
-                                    PostgreSQL
-                                </small>
-
-                                <small>
-                                    REST API
-                                </small>
-
-                                <small>
-                                    Node.js
-                                </small>
-
+                            <div class="mini-tags">
+                                <span>PostgreSQL</span>
+                                <span>REST API</span>
+                                <span>Node.js</span>
                             </div>
 
                         </article>
 
 
+                        <article class="project-mini-card reveal">
 
-                        <!-- 06 -->
-
-                        <article class="project-mini-card">
-
-                            <span>
+                            <div class="mini-number">
                                 06
-                            </span>
+                            </div>
+
+                            <div class="mini-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
 
                             <h4>
                                 Map My Memory
                             </h4>
 
                             <p>
-                                Secure digital journaling platform
-                                designed for privately storing
-                                personal memories.
+                                Secure digital journaling platform designed
+                                for privately storing personal memories.
                             </p>
 
-                            <div>
-
-                                <small>
-                                    Web
-                                </small>
-
-                                <small>
-                                    Security
-                                </small>
-
-                                <small>
-                                    UI/UX
-                                </small>
-
+                            <div class="mini-tags">
+                                <span>Web</span>
+                                <span>Security</span>
+                                <span>UI/UX</span>
                             </div>
 
                         </article>
 
 
+                        <article class="project-mini-card reveal">
 
-                        <!-- 07 -->
-
-                        <article class="project-mini-card">
-
-                            <span>
+                            <div class="mini-number">
                                 07
-                            </span>
+                            </div>
+
+                            <div class="mini-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
 
                             <h4>
                                 Library Management System
                             </h4>
 
                             <p>
-                                End-to-end software testing using
-                                JUnit, GitHub Issues, and JMeter
-                                performance analysis.
+                                End-to-end software testing using JUnit,
+                                GitHub Issues and JMeter performance analysis.
                             </p>
 
-                            <div>
-
-                                <small>
-                                    JUnit
-                                </small>
-
-                                <small>
-                                    JMeter
-                                </small>
-
-                                <small>
-                                    Testing
-                                </small>
-
+                            <div class="mini-tags">
+                                <span>JUnit</span>
+                                <span>JMeter</span>
+                                <span>Testing</span>
                             </div>
 
                         </article>
 
 
+                        <article class="project-mini-card reveal">
 
-                        <!-- 08 -->
-
-                        <article class="project-mini-card">
-
-                            <span>
+                            <div class="mini-number">
                                 08
-                            </span>
+                            </div>
+
+                            <div class="mini-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
 
                             <h4>
                                 Study-Plus AI
                             </h4>
 
                             <p>
-                                AI-powered study planner combining
-                                focus sessions, prototypes, and
-                                usability evaluation.
+                                AI-powered study planner combining focus
+                                sessions, Figma prototypes and usability
+                                evaluation.
                             </p>
 
-                            <div>
-
-                                <small>
-                                    AI
-                                </small>
-
-                                <small>
-                                    Figma
-                                </small>
-
-                                <small>
-                                    UX
-                                </small>
-
+                            <div class="mini-tags">
+                                <span>AI</span>
+                                <span>Figma</span>
+                                <span>UX</span>
                             </div>
 
                         </article>
 
 
+                        <article class="project-mini-card reveal">
 
-                        <!-- 09 -->
-
-                        <article class="project-mini-card">
-
-                            <span>
+                            <div class="mini-number">
                                 09
-                            </span>
+                            </div>
+
+                            <div class="mini-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
 
                             <h4>
                                 Breast Cancer Data Analysis
                             </h4>
 
                             <p>
-                                Machine learning models developed
-                                using Python, pandas, and
-                                scikit-learn.
+                                Machine learning models developed using
+                                Python, pandas and scikit-learn.
                             </p>
 
-                            <div>
-
-                                <small>
-                                    Python
-                                </small>
-
-                                <small>
-                                    Pandas
-                                </small>
-
-                                <small>
-                                    Scikit-learn
-                                </small>
-
+                            <div class="mini-tags">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>Scikit-learn</span>
                             </div>
 
                         </article>
+
 
                     </div>
 
@@ -1486,34 +1393,23 @@
         </section>
 
 
-
-        <!-- =====================================
+        <!-- =====================================================
              CERTIFICATIONS
-        ====================================== -->
+        ====================================================== -->
 
-        <section
-            class="certifications section"
-        >
+        <section id="certifications" class="certifications section">
 
             <div class="container">
 
-                <div class="section-top">
+                <div class="section-heading reveal">
 
-                    <div>
-
-                        <p class="section-label">
-                            CERTIFICATIONS
-                        </p>
-
-                        <h2>
-                            Always learning.
-                        </h2>
-
-                    </div>
-
-                    <p class="section-note">
-                        Continuous learning beyond university.
+                    <p class="section-label">
+                        CERTIFICATIONS
                     </p>
+
+                    <h2>
+                        Always <span>learning.</span>
+                    </h2>
 
                 </div>
 
@@ -1521,30 +1417,32 @@
                 <div class="certification-grid">
 
 
-                    <div class="cert-card">
+                    <article class="cert-card reveal">
 
-                        <span>
-                            01
-                        </span>
+                        <span>01</span>
+
+                        <div class="cert-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
 
                         <h3>
-                            Networking Security
-                            Fundamentals
+                            Networking Security Fundamentals
                         </h3>
 
                         <p>
                             Palo Alto Networks
                         </p>
 
-                    </div>
+                    </article>
 
 
+                    <article class="cert-card reveal">
 
-                    <div class="cert-card">
+                        <span>02</span>
 
-                        <span>
-                            02
-                        </span>
+                        <div class="cert-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
 
                         <h3>
                             Cybersecurity Foundation
@@ -1554,15 +1452,16 @@
                             Palo Alto Networks
                         </p>
 
-                    </div>
+                    </article>
 
 
+                    <article class="cert-card reveal">
 
-                    <div class="cert-card">
+                        <span>03</span>
 
-                        <span>
-                            03
-                        </span>
+                        <div class="cert-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
 
                         <h3>
                             Introduction to Data Science
@@ -1572,15 +1471,16 @@
                             Cisco
                         </p>
 
-                    </div>
+                    </article>
 
 
+                    <article class="cert-card reveal">
 
-                    <div class="cert-card">
+                        <span>04</span>
 
-                        <span>
-                            04
-                        </span>
+                        <div class="cert-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
 
                         <h3>
                             Introduction to Modern AI
@@ -1590,15 +1490,16 @@
                             Cisco
                         </p>
 
-                    </div>
+                    </article>
 
 
+                    <article class="cert-card reveal">
 
-                    <div class="cert-card">
+                        <span>05</span>
 
-                        <span>
-                            05
-                        </span>
+                        <div class="cert-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
 
                         <h3>
                             Data Analytics Essentials
@@ -1608,7 +1509,8 @@
                             Cisco
                         </p>
 
-                    </div>
+                    </article>
+
 
                 </div>
 
@@ -1617,34 +1519,27 @@
         </section>
 
 
-
-        <!-- =====================================
+        <!-- =====================================================
              ACHIEVEMENTS
-        ====================================== -->
+        ====================================================== -->
 
-        <section
-            id="achievements"
-            class="achievements section"
-        >
+        <section id="achievements" class="achievements section">
 
             <div class="container">
 
-                <div class="section-top">
+                <div class="section-heading centered reveal">
 
-                    <div>
+                    <p class="section-label">
+                        ACHIEVEMENTS
+                    </p>
 
-                        <p class="section-label">
-                            ACHIEVEMENTS
-                        </p>
+                    <h2>
+                        A few things I'm <span>proud of.</span>
+                    </h2>
 
-                        <h2>
-                            A few things I'm proud of.
-                        </h2>
-
-                    </div>
-
-                    <p class="section-note">
-                        Building, competing & creating.
+                    <p>
+                        Building, competing and creating solutions
+                        through technology.
                     </p>
 
                 </div>
@@ -1653,98 +1548,111 @@
                 <div class="achievement-grid">
 
 
-                    <!-- QIC -->
+                    <article class="achievement-card reveal">
 
-                    <article class="achievement-card">
+                        <a
+                            href="YOUR_QIC_HACKATHON_VIDEO_URL"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="achievement-link"
+                        >
 
-                        <div class="achievement-photo">
+                            <div class="achievement-photo">
 
-                            <img
-                                src="images/qic.jpeg"
-                                alt="QIC AI Hackathon achievement"
-                            >
+                                <img
+                                    src="images/qic.jpeg"
+                                    alt="QIC AI Hackathon achievement"
+                                >
 
-                        </div>
+                            </div>
+
+                            <div class="achievement-content">
+
+                                <div class="achievement-top">
+
+                                    <span>
+                                        2ND PLACE
+                                    </span>
+
+                                    <small>
+                                        2025
+                                    </small>
+
+                                </div>
+
+                                <h3>
+                                    QIC AI Hackathon
+                                </h3>
+
+                                <p>
+                                    Built <strong>QIC Rewards Quest</strong>,
+                                    an AI-powered gamified insurance engagement
+                                    platform.
+                                </p>
+
+                                <div class="achievement-tag">
+                                    Artificial Intelligence
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </article>
 
 
-                        <div class="achievement-content">
+                    <article class="achievement-card reveal">
 
-                            <span class="achievement-place">
-                                🏆 2ND PLACE
-                            </span>
+                        <a
+                            href="YOUR_QCHEM_HACKATHON_VIDEO_URL"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="achievement-link"
+                        >
 
-                            <p class="achievement-year">
-                                2025
-                            </p>
+                            <div class="achievement-photo">
 
-                            <h3>
-                                QIC AI Hackathon
-                            </h3>
+                                <img
+                                    src="images/qchem.jpeg"
+                                    alt="QChem Future Lab Hackathon achievement"
+                                >
 
-                            <p>
+                            </div>
 
-                                Built
-                                <strong>
-                                    QIC Rewards Quest
-                                </strong>,
-                                an AI-powered gamified insurance
-                                engagement platform.
+                            <div class="achievement-content">
 
-                            </p>
+                                <div class="achievement-top">
 
-                            <span class="achievement-tag">
-                                Artificial Intelligence
-                            </span>
+                                    <span>
+                                        1ST PLACE
+                                    </span>
 
-                        </div>
+                                    <small>
+                                        2025
+                                    </small>
+
+                                </div>
+
+                                <h3>
+                                    QChem Future Lab Hackathon
+                                </h3>
+
+                                <p>
+                                    Designed an AI-driven safety chatbot solution
+                                    focused on improving workplace safety and
+                                    accessibility.
+                                </p>
+
+                                <div class="achievement-tag">
+                                    AI + Safety
+                                </div>
+
+                            </div>
+
+                        </a>
 
                     </article>
 
-
-
-                    <!-- QCHEM -->
-
-                    <article class="achievement-card">
-
-                        <div class="achievement-photo">
-
-                            <img
-                                src="images/qchem.jpeg"
-                                alt="QChem Future Lab Hackathon achievement"
-                            >
-
-                        </div>
-
-
-                        <div class="achievement-content">
-
-                            <span class="achievement-place">
-                                🏆 1ST PLACE
-                            </span>
-
-                            <p class="achievement-year">
-                                2025
-                            </p>
-
-                            <h3>
-                                QChem Future Lab Hackathon
-                            </h3>
-
-                            <p>
-
-                                Designed an AI-driven safety chatbot
-                                solution focused on improving
-                                workplace safety and accessibility.
-
-                            </p>
-
-                            <span class="achievement-tag">
-                                AI + Safety
-                            </span>
-
-                        </div>
-
-                    </article>
 
                 </div>
 
@@ -1753,148 +1661,59 @@
         </section>
 
 
-
-        <!-- =====================================
+        <!-- =====================================================
              INTERESTS
-        ====================================== -->
+        ====================================================== -->
 
-        <section
-            class="interests section"
-        >
+        <section class="interests section">
 
-            <div class="container interests-container">
+            <div class="container">
 
+                <div class="interest-grid">
 
-                <div>
+                    <div class="interest-heading reveal">
 
-                    <p class="section-label">
-                        BEYOND THE CODE
-                    </p>
+                        <p class="section-label">
+                            BEYOND THE CODE
+                        </p>
 
-                    <h2>
-                        Things I'm
-                        <em>
-                            curious
-                        </em>
-                        about.
-                    </h2>
+                        <h2>
+                            Things I'm
+                            <span>curious about.</span>
+                        </h2>
 
-                </div>
+                    </div>
 
 
-                <div class="interest-cloud">
+                    <div class="interest-cloud reveal">
 
-                    <span class="interest large">
-                        Web Development
-                    </span>
-
-                    <span class="interest">
-                        Data Science
-                    </span>
-
-                    <span class="interest purple">
-                        Cybersecurity
-                    </span>
-
-                    <span class="interest">
-                        Cloud Computing
-                    </span>
-
-                    <span class="interest large">
-                        Artificial Intelligence
-                    </span>
-
-                    <span class="interest purple">
-                        App Development
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================
-             CONTACT
-        ====================================== -->
-
-        <section
-            id="contact"
-            class="contact section"
-        >
-
-            <div class="container contact-card">
-
-
-                <div class="contact-icon">
-                    ✈
-                </div>
-
-
-                <div class="contact-text">
-
-                    <p class="section-label">
-                        GET IN TOUCH
-                    </p>
-
-                    <h2>
-                        Let's build something
-                        meaningful together.
-                    </h2>
-
-                    <p>
-
-                        I'm always open to discussing software,
-                        technology, creative ideas, and new
-                        opportunities.
-
-                    </p>
-
-                </div>
-
-
-                <div class="contact-details">
-
-
-                    <!-- Replace email with your actual email -->
-
-                    <a
-                        href="mailto:nausheen2305@gmail.com"
-                    >
-
-                        <span>
-                            ✉
+                        <span class="interest large">
+                            Web Development
                         </span>
 
-                        nausheen2305@gmail.com
+                        <span class="interest">
+                            Data Science
+                        </span>
 
-                    </a>
+                        <span class="interest purple">
+                            Cybersecurity
+                        </span>
 
+                        <span class="interest">
+                            Cloud Computing
+                        </span>
 
-                    <div class="contact-socials">
+                        <span class="interest large purple">
+                            Artificial Intelligence
+                        </span>
 
-                        <!-- Replace # with your actual LinkedIn URL -->
+                        <span class="interest">
+                            App Development
+                        </span>
 
-                        <a
-                            href="https://linkedin.com/in/nausheen-khan-26808633b/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            LinkedIn
-                        </a>
-
-
-                        <!-- Replace # with your actual GitHub URL -->
-
-                        <a
-                            href="https://github.com/Nausheenkhan-git"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            GitHub
-                        </a>
+                        <span class="interest">
+                            UI/UX Design
+                        </span>
 
                     </div>
 
@@ -1904,149 +1723,187 @@
 
         </section>
 
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section class="contact section" id="contact">
+
+            <div class="container">
+
+                <div class="contact-box reveal">
+
+                    <div class="contact-decoration decoration-one"></div>
+                    <div class="contact-decoration decoration-two"></div>
+
+                                        <div class="contact-content">
+
+                        <p class="section-label">
+                            LET'S WORK TOGETHER
+                        </p>
+
+                        <h2>
+                            Have a project
+                            <span>in mind?</span>
+                        </h2>
+
+                        <p>
+                            I'm always interested in opportunities where
+                            technology, design and creativity come together.
+                        </p>
+
+                        <div class="contact-buttons">
+
+                            <a
+                                href="mailto:nausheen2305@gmail.com"
+                                class="btn btn-primary"
+                            >
+                                Get In Touch
+                                <span>↗</span>
+                            </a>
+
+                            <a
+                                href="https://linkedin.com/in/nausheen-khan-26808633b/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-outline"
+                            >
+                                <i class="fab fa-linkedin"></i>
+                                LinkedIn
+                                <span>↗</span>
+                            </a>
+
+                            <a
+                                href="https://github.com/Nausheenkhan-git"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-outline"
+                            >
+                                <i class="fab fa-github"></i>
+                                GitHub
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-side">
+
+                        <div class="contact-line"></div>
+
+                        <span>
+                            CURRENTLY OPEN TO
+                        </span>
+
+                        <strong>
+                            Software Development
+                        </strong>
+
+                        <strong>
+                            UI/UX Design
+                        </strong>
+
+                        <strong>
+                            Web Development
+                        </strong>
+
+                        <strong>
+                            AI & Data Projects
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
     </main>
 
 
-
-    <!-- =========================================
+    <!-- =========================================================
          FOOTER
-    ========================================== -->
+    ========================================================== -->
 
     <footer class="footer">
 
         <div class="container">
 
-            <p>
-                © 2026 Nausheen Khan.
-                All rights reserved.
-            </p>
+            <div class="footer-top">
 
-            <p>
-                Designed & developed with ♡ by Nausheen.
-            </p>
+                <a href="#home" class="footer-brand">
+
+                    <span class="brand-symbol">
+                        &lt;/&gt;
+                    </span>
+
+                    <span>
+                        Nausheen Khan
+                    </span>
+
+                </a>
+
+
+                <div class="footer-links">
+
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+
+                </div>
+
+
+                <div class="footer-socials">
+
+                    <!-- Replace these with your real URLs -->
+
+                    <a
+                        href="https://linkedin.com/in/nausheen-khan-26808633b/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+
+                    <a
+                        href="https://github.com/Nausheenkhan-git"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © <span id="currentYear"></span>
+                    Nausheen Khan. All rights reserved.
+                </span>
+
+                <span>
+                    Designed & built with ✦
+                </span>
+
+            </div>
 
         </div>
 
     </footer>
 
 
-
-    <!-- =========================================
-         JAVASCRIPT
-         Intro + Scroll Reveal
-    ========================================== -->
-
-    <script>
-
-        /* =========================================
-           INTRO ANIMATION
-        ========================================== */
-
-        window.addEventListener("load", function () {
-
-            const intro =
-                document.getElementById("intro");
-
-            setTimeout(function () {
-
-                intro.classList.add("intro-finished");
-
-            }, 3000);
-
-        });
-
-
-
-        /* =========================================
-           SCROLL REVEAL
-        ========================================== */
-
-        const sections =
-            document.querySelectorAll(".section");
-
-
-        const revealObserver =
-            new IntersectionObserver(
-                function (entries) {
-
-                    entries.forEach(function (entry) {
-
-                        if (entry.isIntersecting) {
-
-                            entry.target.classList.add("visible");
-
-                        }
-
-                    });
-
-                },
-                {
-                    threshold: 0.12
-                }
-            );
-
-
-        sections.forEach(function (section) {
-
-            revealObserver.observe(section);
-
-        });
-
-
-
-        /* =========================================
-           ACTIVE NAVIGATION
-        ========================================== */
-
-        const navLinks =
-            document.querySelectorAll(".nav-links a");
-
-        const pageSections =
-            document.querySelectorAll(
-                "main section[id]"
-            );
-
-
-        window.addEventListener("scroll", function () {
-
-            let currentSection = "";
-
-            pageSections.forEach(function (section) {
-
-                const sectionTop =
-                    section.offsetTop - 180;
-
-                if (
-                    window.scrollY >= sectionTop
-                ) {
-
-                    currentSection =
-                        section.getAttribute("id");
-
-                }
-
-            });
-
-
-            navLinks.forEach(function (link) {
-
-                link.classList.remove("active");
-
-                if (
-                    link.getAttribute("href") ===
-                    "#" + currentSection
-                ) {
-
-                    link.classList.add("active");
-
-                }
-
-            });
-
-        });
-
-    </script>
+    <!-- Main JavaScript -->
+    <script src="/js/script.js"></script>
 
 </body>
-
 </html>
